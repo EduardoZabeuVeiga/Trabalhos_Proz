@@ -1,0 +1,56 @@
+#Faça uma função calculadora de dois números com três parâmetros: os dois primeiros serão os números da operação e o terceiro será a entrada que definirá a operação a ser executada. Considera a seguinte definição:
+
+def novo():
+      calc_novo = input('''Deseja calcular novamente?
+      Digite S para SIM ou N para NÃO.''')
+      if calc_novo.upper() == 'S':
+          calcular()
+      elif calc_novo.upper() == 'N':
+          print("Obrigado, volte sempre")
+      else:
+        novo()
+
+def calcular():
+  operacao = input('''
+  Por favor, digite a operação matemática que você gostaria de completar:
+
+  + : Para Adição
+  - : Para Subtração
+  * : Para Multiplicação
+  / : Para Divisão
+  ''')
+
+
+  num1 = int(input("Digite o 1º numero: "))
+  num2 = int(input("Digite o 2º numero: "))
+
+  if operacao == '+':
+    print()
+
+
+  ##Adição
+  if operacao == '+':
+    print('{} + {} ='.format(num1, num2))
+    print(num1 + num2)
+
+  ##Subtração
+  elif operacao == '-':
+    print('{} - {} ='.format(num1, num2))
+    print(num1 - num2)
+
+  ##Divisão
+  elif operacao == '/':
+    print('{} / {} ='.format(num1, num2))
+    print(num1 / num2)
+
+  ##Multiplicação
+  elif operacao == '':
+    print('{} {} ='.format(num1, num2))
+    print(num1 * num2)
+
+  else:
+    print("Você não digitou um operador válido, execute o programa novamente")
+
+  novo()
+
+calcular()

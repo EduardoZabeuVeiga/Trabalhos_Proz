@@ -1,0 +1,28 @@
+name = str
+nasc = int
+comp = False
+ano_atual = 2022
+
+name = str(input("Como se chama?:\n"))
+
+while (comp == False):
+
+   print("\nQual seu ano de nascimento com 4 digitos: \n")
+
+   try:
+
+       nasc = int(input())
+
+       if (nasc < ano_atual and nasc > 1921):
+
+           comp = True
+
+           print("\n",name, ", voce completa",ano_atual - nasc,"anos em",ano_atual)
+
+       else :
+
+           print("\nCaso nao seja fantasma ou viajante do tempo, digite um numero valido")
+
+   except:
+
+       print("Caracter inválido, isso nao é ano de nascimento com 4 digitos!!")
