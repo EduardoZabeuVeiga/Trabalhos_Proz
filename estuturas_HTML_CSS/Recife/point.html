@@ -3,73 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Marco Zero</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        body{
-            background: linear-gradient(goldenrod, pink);
-            text-decoration: double;
-        }
-        header{
-            background: linear-gradient(black, goldenrod);
-            color: orangered;
-             
-        }
-
-        footer {
-            padding: 50px 0;
-            background: aqua;
-            color: black;
-            text-align: center;
-
-        }
-
-        .container {
-            text-align: center;
-            
-        }
-
-
-        footer p{
-
-            margin-top: 20px;   
-            margin-bottom: 50px;
-        }
-
-        footer form {
-            width: 500px;
-            margin-right: auto;
-            margin-left: auto;
-        }
-
-        footer input, footer, textarea{
-            margin-bottom: 20px;
-            width: 100%;
-            display: block;
-            padding: 15px;
-            box-sizing: border-box;
-            border: none;
-
-        }
-
-
-
-        header{
-            display: flex;
-            justify-content: left;
-            align-items: center;
-            height: 12vh;
-            width: 100%;
-
-        }
-
-        main{
-        
-        }
-    </style>
 </head>
 <body>
     <header>       <img src="./img/marco-zero-recife-4-730x449.webp" width="80" height="80" alt="Imagem da placa do marco zero de Recife" >
@@ -133,15 +68,15 @@
     <footer>
         <h2>CONTATO</h2>
 
+        <label for="bbc">bbc</label>
         <input type="text" name="nome" placeholder="informe seu nome">
 
-        <input type="email" name="email" placeholder="Informe seu e-mail">
+        <label for="">e-mail</label>
+        <input type="email" name="email" id="bbc" placeholder="Informe seu e-mail">
 
         <textarea name="mensagem" placeholder="escreva sua mensagem"></textarea>
 
         <input type="submit" value="Enviar">
-
-        
 
         
     </footer>
