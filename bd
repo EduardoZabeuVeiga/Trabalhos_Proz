@@ -1,3 +1,17 @@
+DELIMITER //
+CREATE PROCEDURE LevantamentoDiario(IN dataConsulta DATE)
+BEGIN
+    SELECT 
+        dataConsulta AS Data,
+        COUNT(IP.ID_PRODUTO) AS QuantidadeProdutosComprados
+    FROM PEDIDO P
+    JOIN ITEM_PEDIDO IP ON P.ID_PEDIDO = IP.ID_PEDIDO
+    WHERE DATE(P.DATA_PEDIDO) = dataConsulta;
+END //
+DELIMITER ;
+
+
+
 CREATE TABLE colaboradores 
 ( 
  id SERIAL PRIMARY KEY,  
