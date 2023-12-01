@@ -23,6 +23,13 @@ CREATE TABLE contatos
  inscrito_newsletter CHAR(1) NOT NULL DEFAULT 'N',  
  ativo CHAR(1) NOT NULL DEFAULT 'S'
 ); 
+-- Criar um trigger que atualiza o contatos após uma inserção ou remoção (insert ou deleter na tabela contatos)
+CREATE OR REPLACE FUNCTION atualizar_tabela()
+RETURNS TRIGGER AS $$
+BEGIN
+    UPDATE estoque SET quantidade = quantidade - NEW.quantidade WHERE id_produto = NEW.id_produto;
+    RETURN NEW;
+END;
 
 CREATE TABLE mensagens 
 ( 
