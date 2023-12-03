@@ -1,12 +1,14 @@
-create or replace procedure itens_vendidos ()
-language plpgsql
-as $$
-declare
-begin
-    	SELECT * FROM vendas
-        WHERE quantidade_vendida;
-end $$;
-
+CREATE FUNCTION SomarClientesCadastrados(dataConsulta DATE)
+RETURNS INT
+BEGIN
+    DECLARE totalClientes INT;
+    
+    SELECT COUNT(*) INTO totalClientes
+    FROM Clientes
+    WHERE DataCadastro = dataConsulta;
+    
+    RETURN totalClientes;
+END //
 
 DELIMITER //
 CREATE PROCEDURE LevantamentoDiario(IN dataConsulta DATE)
