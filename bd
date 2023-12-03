@@ -1,3 +1,13 @@
+create or replace procedure itens_vendidos ()
+language plpgsql
+as $$
+declare
+begin
+    	SELECT * FROM vendas
+        WHERE quantidade_vendida;
+end $$;
+
+
 DELIMITER //
 CREATE PROCEDURE LevantamentoDiario(IN dataConsulta DATE)
 BEGIN
